@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kim Khánh & Duy Tường</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .invitation-card {
+            background: white;
+            max-width: 600px;
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .header::before {
+            content: '♥';
+            font-size: 60px;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.1); }
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            font-style: italic;
+        }
+
+        .content {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .couple-names {
+            font-size: 3em;
+            color: #764ba2;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .ampersand {
+            font-size: 0.8em;
+            color: #ff6b9d;
+            margin: 0 10px;
+        }
+
+        .date-location {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border-left: 5px solid #667eea;
+        }
+
+        .date-location h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .detail {
+            margin: 15px 0;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .detail strong {
+            color: #764ba2;
+        }
+
+        .message {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #666;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .decorative-line {
+            width: 200px;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #764ba2, transparent);
+            margin: 20px auto;
+        }
+
+        @media (max-width: 600px) {
+            .couple-names {
+                font-size: 2em;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="invitation-card">
+        <div class="header">
+            <h1>Thiệp Mời Cưới</h1>
+            <p>Trân trọng kính mời</p>
+        </div>
+
+        <div class="content">
+            <div class="couple-names">
+                Kim Khánh <br>
+                <span class="ampersand">&</span> <br>
+                Duy Tường
+            </div>
+
+            <div class="decorative-line"></div>
+
+            <p class="message">
+                Chúng tôi trân trọng kính mời Quý khách đến dự<br>
+                buổi tiệc chung vui cùng gia đình chúng tôi
+            </p>
+
+            <div class="date-location">
+                <h3>📅 Thông Tin Tiệc Cưới</h3>
+                <div class="detail">
+                    <strong>Thời gian:</strong> 18:00, Chủ Nhật, 15/12/2024
+                </div>
+                <div class="detail">
+                    <strong>Địa điểm:</strong> Nhà Hàng Tiệc Cưới Riverside
+                </div>
+                <div class="detail">
+                    <strong>Địa chỉ:</strong> 123 Đường Lê Lợi, Quận 1, TP.HCM
+                </div>
+            </div>
+
+            <div class="decorative-line"></div>
+
+            <p class="message">
+                Sự hiện diện của Quý khách là niềm vinh hạnh<br>
+                cho gia đình chúng tôi!
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>💝 Rất hân hạnh được đón tiếp 💝</p>
+        </div>
+    </div>
+</body>
+</html>
