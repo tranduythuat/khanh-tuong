@@ -1,0 +1,69 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.letter-section {
+    width: 100%;
+    max-width: 500px;
+    .content {
+        width: 100%;
+        aspect-ratio: 500 / 887;
+        background: url('../../assets/images/letter.png') no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        font-family: $font-1FTV-VIP-Qerginas;
+        box-shadow:  0 10px 20px rgba(0, 0, 0, 0.439);
+        position: relative;
+        cursor: pointer;
+        .couple-names {
+            margin-bottom: 2%;
+            font-size: 20px;
+            letter-spacing: 2px;
+            span {
+                font-size: 14px;
+            }
+        }
+
+        .date {
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        .loveanyway {
+            position: absolute;
+            bottom: 9%;
+            img {
+                max-width: 165px;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            .couple-names {
+                font-size: calc((20 / 500) * 100vw);
+                letter-spacing: calc((2 / 500) * 100vw);
+                span {
+                    font-size: calc((14 / 500) * 100vw);
+                }
+            }
+    
+            .date {
+                font-size: calc((12 / 500) * 100vw);
+                letter-spacing: calc((1 / 500) * 100vw);
+            }
+
+            .loveanyway {
+                img {
+                    max-width: calc((165 / 500) * 100vw);
+                }
+            }
+        }
+    }
+}

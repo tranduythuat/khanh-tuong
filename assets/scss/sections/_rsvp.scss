@@ -1,0 +1,311 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.rsvp {
+    width: 100%;
+    .content {
+        width: 100%;
+        font-family: $font-1FTV-VIP-Qerginas;
+        background: url('../../assets/images/flower_bg_03.png') no-repeat;
+        background-size: 65%;
+        background-position: bottom right;
+        perspective: 1000px;
+        background-color: $primary-color;
+        position: relative;
+        .top-img {
+            position: absolute;
+            top: 0;
+            img {
+                max-width: 250px;
+                width: 100%;
+                height: auto;
+            }
+        }
+        
+        .rsvp-form {
+            display: block;
+            padding: 8% 9% 5%;
+
+            .header {
+                padding-bottom: 8%;
+                .title {
+                    font-family: $font-Bellamy-Stevenson;
+                    font-size: 54px;
+                    font-weight: 300;
+                    margin-bottom: 5%;
+                }
+                .subtitle {
+                    font-size: 14px;
+                }
+            }
+
+            .button-group {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 6%;
+                margin-bottom: 2%;
+
+                .radio-wrapper {
+                    position: relative;
+                }
+
+                .radio-wrapper input[type="radio"] {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+
+                .radio-label {
+                    font-size: 12px;
+                    font-family: inherit;
+                    display: block;
+                    padding: 4%;
+                    border-radius: 8px;
+                    background: transparent;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    text-align: center;
+                    border: 2px solid $text-color;
+                    &:hover {
+                        background: $text-color;
+                        color: white;
+                    }
+                }
+
+                .radio-wrapper input[type="radio"]:checked + .radio-label {
+                    background: $text-color;
+                    color: white;
+                }
+            }
+
+            .form-group {
+                margin-bottom: 2%;
+
+                input[type="text"],
+                input[type="number"],
+                textarea {
+                    font-family: $font-lora;
+                    color: $text-color;
+                    width: 100%;
+                    padding: 2% 4%;
+                    border-radius: 8px;
+                    background: transparent;
+                    font-size: 12px;
+                    outline: none;
+                    border: 2px solid $text-color;
+                    transition: border-color 0.3s ease;
+                    // text-transform: uppercase;
+                }
+
+                input[type="text"]:focus,
+                input[type="number"]:focus,
+                textarea:focus {
+                    outline: none;
+                }
+
+                textarea#message {
+                    aspect-ratio: 500 / 120;
+                    resize: vertical;
+                    font-family: inherit;
+                }
+
+                textarea#another {
+                    aspect-ratio: 500 / 43;
+                    resize: vertical;
+                    font-family: inherit;
+                }
+
+                input[type="text"]::placeholder,
+                textarea::placeholder {
+                    // color: $text-color;
+                }
+
+                textarea::placeholder {
+                    white-space: pre-line; /* Cho phép hiển thị xuống dòng trong placeholder */
+                }
+
+                .guest-info-title {
+                    font-size: 14px;
+                    margin-bottom: 2%;
+                }
+
+                .form-select {
+                    font-family: $font-lora;
+                    width: 100%;
+                    padding: 2% 4%;
+                    border-radius: 8px;
+                    background: transparent;
+                    font-size: 14px;
+                    color: $primary-color;
+                    outline: none;
+                    border: 2px solid $primary-color ;
+                    transition: border-color 0.3s ease;
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    background-image: url("../../assets/images/chevron_icon.png");
+                    background-repeat: no-repeat;
+                    background-position: right 10px center;
+                    background-size: 9px;
+                    padding-right: 45px;
+                    cursor: pointer;
+                }
+
+                .wish-label {
+                    font-size: 14px;
+                    margin-bottom: 3%;
+                    margin-top: 6%;
+                }
+            }
+
+            .form-group.dietary {
+                margin-top: 5%;
+                p.subtitle {
+                    margin-bottom: 3%;
+                    font-size: 14px;
+                }
+            }
+
+            .form-group.other {
+                // margin-bottom: 8%;
+            }
+
+            .form-group.guest-info {
+                margin-bottom: 6%;
+                margin-top: 5%;
+                .dietary-label {
+                    margin-bottom: 2%;
+                }
+                .subtitle {
+                    margin-bottom: 3%;
+                }
+            }
+
+            .note {
+                border-top: 2px dashed $text-color;
+                border-bottom: 2px dashed $text-color;
+                padding: 5% 0;
+                line-height: 1.5;
+                text-align: center;
+                margin-top: 5%;
+                margin-bottom: 5%;
+                font-size: 14px;
+            }
+
+            hr {
+                border-top: 2px dashed $text-color;
+                margin-bottom: 5%;
+            }
+
+            .message {
+                text-align: center;
+                margin: 10% 0 4%;
+                p {
+                    margin-bottom: 2%;
+                }
+            }
+    
+            .submit-btn {
+                font-family: inherit;
+                width: 30%;
+                padding: 2% 0 1%;
+                background: $text-color;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                font-weight: 600;
+                font-size: 14px;
+                cursor: pointer;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                transition: background 0.3s ease;
+                margin: 3% 0 10%;
+            }
+    
+            .submit-btn:hover {
+                background: rgb(41, 51, 36);
+                opacity: 0.9;
+            }
+    
+            .submit-btn:active {
+                transform: scale(0.98);
+            }
+    
+        }
+    }
+
+    label {
+        display: block;
+        margin-bottom: 2%;
+        font-size: 9.11px;
+    }
+
+    .text-size-10 {
+        font-size: 9.11px;
+    }
+
+    .text-size-8 {
+        font-size: 8px;
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            .text-size-10, label{
+                font-size: calc((9.11 / 500) * 100vw);
+            }
+        
+            .rsvp-form {
+                .header {
+                    .title {
+                        font-size: calc((54 / 500) * 100vw);
+                    }
+                    .subtitle {
+                        font-size: calc((14/ 500) * 100vw);;
+                    }
+                }
+
+                .button-group {
+                    .radio-label {
+                        font-size: calc((12 / 500) * 100vw);
+                    }
+    
+                    .radio-wrapper input[type="radio"]:checked + .radio-label {
+                        background: $text-color;
+                        color: white;
+                    }
+                }
+
+                .form-group {
+                    input[type="text"],
+                    input[type="number"],
+                    textarea,
+                    .form-select {
+                        font-size: calc((14 / 500) * 100vw);
+                    }
+
+                    .guest-info-title {
+                        font-size: calc((15 / 500) * 100vw);
+                    }
+
+                    .wish-label {
+                        font-size: calc((14 / 500) * 100vw);
+                    }
+                }
+
+                .form-group.dietary {
+                    p.subtitle {
+                        font-size: calc((14 / 500) * 100vw);
+                    }
+                }
+
+                .note {
+                    font-size: calc((14 / 500) * 100vw);
+                }
+
+                .submit-btn {
+                    font-size: calc((14 / 500) * 100vw);
+                }
+            }
+        }
+    }
+}

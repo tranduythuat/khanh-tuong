@@ -1,0 +1,153 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.dresscode {
+    width: 100%;
+    .content {
+        width: 100%;
+        perspective: 1000px;
+        background: url('../../assets/images/flower_bg_02.png') no-repeat right 20% / 45%;
+        background-color: $primary-color;
+        padding-bottom: 23%;
+        h2 {
+            font-family: $font-Bellamy-Stevenson;
+            font-size: 54px;
+            font-weight: 300;
+            margin-top: 17%;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            // font-family: $font-1FTV-VIP-Qerginas;
+            font-family: $font-ICIELBCOLDSTYLE;
+            margin: 1% 0 3%;
+        }
+
+        .description-box {
+            display: flex;
+            justify-content: center;
+            gap: 5%;
+            .description {
+                .label {
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    font-family: $font-ICIELBCOLDSTYLE;
+                }
+                .subtext {
+                    font-size: 18px;
+                    margin-top: 6%;
+                }
+                .color-palette {
+                    margin: 5% 0 3%;
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    gap: 10%;
+        
+                    .color-circle {
+                        max-width: 25px;
+                        width: 100%;
+                        aspect-ratio: 1;
+                        border-radius: 50%;
+                        border: 1px solid $text-color;
+                    }
+                }
+            }
+            
+            .desc-img{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    max-width: 50px;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        
+        .sub-text {
+            font-size: 16px;
+            font-family: $font-ICIELBCOLDSTYLE;
+            margin-top: 2%;
+        }
+        .couple-img {
+            width: 100%;
+            @include flex-center;
+            margin-top: 12%;
+            .box-img {
+                max-width: 412px;
+                width: 100%;
+                aspect-ratio: 412 / 358;
+                position: relative;
+                img {
+                    max-width: 196px;
+                    aspect-ratio: 196 / 280;
+                    width: 100%;
+                    height: auto;
+                    background-color: $image_bg;
+
+                }
+                img.dress_couple_01 {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                }
+                img.dress_couple_02 {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            h2 {
+                font-size: calc((52 / 500) * 100vw);
+            }
+
+            .subtitle {
+                font-size: calc((16 / 500) * 100vw);
+            }
+    
+
+            .description-box {
+                .description {
+                    .label {
+                        font-size: calc((16 / 500) * 100vw);
+                    }
+                    .subtext {
+                        font-size: calc((18 / 500) * 100vw);
+                    }
+                    .color-palette {
+                        .color-circle {
+                            max-width: calc((25 / 500) * 100vw);
+                        }
+                    }
+                }
+                
+                .desc-img{
+                    img {
+                        max-width: calc((50 / 500) * 100vw);
+                    }
+                }
+            }
+
+            .sub-text {
+                font-size: calc((16 / 500) * 100vw);
+            }
+
+            .couple-img {
+                .box-img {
+                    max-width: calc((412 / 500) * 100vw);
+                    img {
+                        max-width: calc((196 / 500) * 100vw);
+                    }
+                }
+            }
+        }
+    }
+}

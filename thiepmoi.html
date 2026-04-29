@@ -1,206 +1,496 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kim Khánh & Duy Tường</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
+    <meta
+      property="og:image"
+      content=""
+    />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="400" />
 
-        .invitation-card {
-            background: white;
-            max-width: 600px;
-            width: 100%;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-            animation: fadeIn 1s ease-in;
-        }
+    <meta property="og:title" content="Kim Khánh & Duy Tường" />
+    <meta property="og:description" content="23.05.2026" />
+    <meta property="og:type" content="website" />
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    <link rel="stylesheet" href="dist/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  </head>
 
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 40px 20px;
-            text-align: center;
-            color: white;
-            position: relative;
-        }
-
-        .header::before {
-            content: '♥';
-            font-size: 60px;
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: heartbeat 1.5s infinite;
-        }
-
-        @keyframes heartbeat {
-            0%, 100% { transform: translateX(-50%) scale(1); }
-            50% { transform: translateX(-50%) scale(1.1); }
-        }
-
-        .header h1 {
-            font-size: 2.5em;
-            margin-top: 40px;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        .header p {
-            font-size: 1.2em;
-            font-style: italic;
-        }
-
-        .content {
-            padding: 40px;
-            text-align: center;
-        }
-
-        .couple-names {
-            font-size: 3em;
-            color: #764ba2;
-            margin: 20px 0;
-            font-weight: bold;
-        }
-
-        .ampersand {
-            font-size: 0.8em;
-            color: #ff6b9d;
-            margin: 0 10px;
-        }
-
-        .date-location {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 15px;
-            margin: 30px 0;
-            border-left: 5px solid #667eea;
-        }
-
-        .date-location h3 {
-            color: #333;
-            margin-bottom: 15px;
-            font-size: 1.5em;
-        }
-
-        .detail {
-            margin: 15px 0;
-            font-size: 1.1em;
-            color: #555;
-        }
-
-        .detail strong {
-            color: #764ba2;
-        }
-
-        .message {
-            font-size: 1.1em;
-            line-height: 1.8;
-            color: #666;
-            margin: 20px 0;
-            font-style: italic;
-        }
-
-        .footer {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 20px;
-            text-align: center;
-            color: white;
-        }
-
-        .decorative-line {
-            width: 200px;
-            height: 2px;
-            background: linear-gradient(to right, transparent, #764ba2, transparent);
-            margin: 20px auto;
-        }
-
-        @media (max-width: 600px) {
-            .couple-names {
-                font-size: 2em;
-            }
-            
-            .header h1 {
-                font-size: 2em;
-            }
-            
-            .content {
-                padding: 20px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="invitation-card">
-        <div class="header">
-            <h1>Thiệp Mời Cưới</h1>
-            <p>Trân trọng kính mời</p>
+  <body>
+    <div class="letter-section">
+      <div class="content" id="open-card" data-anime="flip-vertical-left">
+        <div class="couple-names">
+          KIM KHÁNH <span>&</span> DUY TƯỜNG
         </div>
-
-        <div class="content">
-            <div class="couple-names">
-                Kim Khánh <br>
-                <span class="ampersand">&</span> <br>
-                Duy Tường
-            </div>
-
-            <div class="decorative-line"></div>
-
-            <p class="message">
-                Chúng tôi trân trọng kính mời Quý khách đến dự<br>
-                buổi tiệc chung vui cùng gia đình chúng tôi
-            </p>
-
-            <div class="date-location">
-                <h3>📅 Thông Tin Tiệc Cưới</h3>
-                <div class="detail">
-                    <strong>Thời gian:</strong> 18:00, Chủ Nhật, 15/12/2024
-                </div>
-                <div class="detail">
-                    <strong>Địa điểm:</strong> Nhà Hàng Tiệc Cưới Riverside
-                </div>
-                <div class="detail">
-                    <strong>Địa chỉ:</strong> 123 Đường Lê Lợi, Quận 1, TP.HCM
-                </div>
-            </div>
-
-            <div class="decorative-line"></div>
-
-            <p class="message">
-                Sự hiện diện của Quý khách là niềm vinh hạnh<br>
-                cho gia đình chúng tôi!
-            </p>
+        <div class="date">
+          23.05.2026
         </div>
-
-        <div class="footer">
-            <p>💝 Rất hân hạnh được đón tiếp 💝</p>
+        <div class="loveanyway">
+          <img src="assets/images/loveanyway.png" alt="" />
         </div>
+      </div>
     </div>
-</body>
+    <div class="container">
+      <section class="hero">
+        <div class="content" data-anime="fade-in">
+          <div class="logo">
+            <img src="assets/images/logo.png" alt="" data-anime="flip-vertical-left">
+          </div>
+          <div class="text-box">
+            <div class="label" data-anime="fade-in">The wedding of</div>
+            <div class="couple-name">
+              <div class="wife" data-anime="fade-left">Kim Khánh</div>
+              <div class="husband" data-anime="fade-right">Duy Tường</div>
+            </div>
+            <div class="date" data-anime="fade-in">23.05.2026</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="invite">
+        <div class="content" data-anime="fade-in">
+          <p class="invitation-text" data-anime="fade-in">
+            With Love, <br />
+            We invite you to celebrate the wedding of
+          </p>
+          <div class="names">
+            <div class="wife" data-anime="fade-right">Kim Khánh</div>
+            <!-- <div class="ampersand" data-anime="fade-in">
+              <img src="assets/images/icons/ampersand_icon_1.png" alt="" />
+            </div> -->
+            <div class="ampersand" data-anime="fade-in">
+              and
+            </div>
+            <div class="husband" data-anime="fade-left">Duy Tường</div>
+          </div>
+          <div class="divider" data-anime="fade-in">
+            <img src="assets/images/icons/divider.png" alt="">
+          </div>
+          <div class="datetime">
+            <div class="title" data-anime="fade-in">Date & Time</div>
+            <div class="date" data-anime="fade-in">17h00 | 23.05.2026</div>
+          </div>
+
+          <div class="location">
+            <div class="name" data-anime="flip-vertical-left">
+              The Mira Central Park
+            </div>
+            <div class="address" data-anime="fade-in">
+              128/16 Nguyễn Ái Quốc, Phường Tam Hiệp, Đồng Nai
+            </div>
+            <button class="maps-button" data-anime="fade-in" id="maps-button">MAPS</button>
+          </div>
+          <script>
+            document.getElementById("maps-button").addEventListener("click", () => {
+              window.open("https://maps.app.goo.gl/CNNniQcFxeYDhsSN7", "_blank");
+            });
+          </script>
+        </div>
+      </section>
+
+      <section class="our-story">
+        <div class="content" data-anime="fade-in">
+          <div class="text-main" data-anime="fade-in">
+            <img src="assets/images/wax_seal.png" class="wax_seal" alt="">
+            <div class="items">
+              <div class="item">
+                In the tender closing days of the year, when Saigon glowed beneath warm 
+                lights and quiet magic ﬁlled the air, fate brushed their lives together in the 
+                softest way - a smile on Tinder, a moment of recognition, a feeling so right 
+                it seemed to come from a lifetime before.
+              </div>
+              <div class="item">
+                Their ﬁrst meeting was simple. <br>
+                No expectations. No promises. Just a quiet certainty. <br>
+                Yet in that simplicity, their hearts exhaled, ﬁnding calm in one another. And on New Year’s Eve, as ﬁreworks bloomed across the sky and the city counted down in unison, his gaze found hers - and in that crowded moment, the world gently fell away.
+              </div>
+              <div class="item">
+                Their love did not arrive in a rush. It was patiently woven from honest choic- es: one who chose to stay, one who dared to believe, and two souls stepping toward each other with open hands. In home-cooked meals, in starlight drifting across the balcony, in quiet mornings shared within the same walls, they learned that home is not built of bricks or rooms, but of a single, beloved presence.
+              </div>
+              <div class="item">
+                And so, on a soft and gentle evening, as the song that once belonged only to them ﬁlled the air, he knelt - not out of grand gesture, but out of certainty - and spoke the truth he had carried all along: <br> “I choose you. Today. Tomorrow. And Forever”
+              </div>
+            </div>
+          </div>
+          <div class="sub-text">
+            <img src="assets/images/loveofalway.png" alt="" data-anime="flip-vertical-left">
+          </div>
+        </div>
+      </section>
+
+      <section class="timeline">
+        <div class="content" data-anime="fade-in">
+          <h1 class="title" data-anime="fade-in">Details</h1>
+          <div class="items">
+            <div class="item timeline-item">
+              <div class="icon">
+                <img class="icon-animate" src="assets/images/icons/gate.png" alt="" />
+              </div>
+              <div class="time">17h00 | Đón khách và chụp hình</div>
+            </div>
+            <div class="item timeline-item">
+              <div class="icon">
+                <img class="icon-animate" src="assets/images/icons/cake.png" alt="" />
+              </div>
+              <div class="time">18h15 | Làm lễ</div>
+            </div>
+            <div class="item timeline-item">
+              <div class="icon">
+                <img class="icon-animate" src="assets/images/icons/dance.png" alt="" />
+              </div>
+              <div class="time">18h45 | Khai tiệc</div>
+            </div>
+            <!-- <div class="item timeline-item">
+              <div class="icon">
+                <img class="icon-animate" src="assets/images/icons/party.png" alt="" />
+              </div>
+              <div class="time">8:30 PM | After Party</div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+
+      <section class="dresscode">
+        <div class="content" data-anime="fade-in">
+          <h2 data-anime="fade-in">Dresscode</h2>
+          <div class="subtitle">Garden Formal</div>
+          <div class="description-box">
+            <div class="description">
+              <div class="label" data-anime="fade-in">Ladies</div>
+              <div class="subtext" data-anime="fade-in">Soft Pink / Beige</div>
+               <div class="color-palette">
+                <div class="color-circle first" style="background-color: #ffb6c1"></div>
+                <div class="color-circle second" style="background-color: #fff2dd"></div>
+              </div>
+            </div>
+            <div class="desc-img">
+              <img src="assets/images/icons/dresscode.png" data-anime="fade-in" alt="">
+            </div>
+            <div class="description">
+              <div class="label" data-anime="fade-in">Gentlements</div>
+              <div class="subtext" data-anime="fade-in">Beige / Black</div>
+               <div class="color-palette">
+                <div class="color-circle first" style="background-color: #fff2dd"></div>
+                <div class="color-circle second" style="background-color: #1a1a1a"></div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="color-palette">
+            <div
+              class="color-circle first"
+              style="background-color: #f7a5acff"
+            ></div>
+            <div
+              class="color-circle second"
+              style="background-color: #f28f2bff"
+            ></div>
+            <div
+              class="color-circle third"
+              style="background-color: #c6c372ff"
+            ></div>
+            <div
+              class="color-circle four"
+              style="background-color: #b6d2eeff"
+            ></div>
+          </div> -->
+          <div class="sub-text" data-anime="fade-in">
+            We kindly ask gentlemen to avoid <br> FULL BLACK outfits.
+          </div>
+          <div class="couple-img">
+            <div class="box-img">
+              <img src="" class="dress_couple_01" alt="" data-anime="fade-left">
+              <img src="" class="dress_couple_02" alt="" data-anime="fade-right">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faqs">
+        <div class="content" data-anime="fade-in">
+          <div class="title" data-anime="fade-in">
+            FAQs
+          </div>
+          <div class="faq-container">
+            <div class="faq-item active" data-anime="fade-up">
+              <button class="faq-header">
+                <span>Di chuyển đến các địa điểm tổ chức như thế nào?</span>
+                <span class="icon">−</span>
+              </button>
+              <div class="faq-content">
+                <p>
+                  Quý vị ơi! Sự hiện diện và những lời chúc của quý vị đến với gia đình chúng con là một niềm vinh dự vô cùng hạnh phúc. <br><br>
+
+                  Nhằm tạo sự thuận tiện cho Quý vị trong việc di chuyển đến địa điểm tổ chức, gia đình chúng con có chuẩn bị xe đưa đón khách tham dự lễ cưới. <br><br>
+
+                  Chúng con sẽ chuẩn bị xe tại 02 điểm đón sau: <br><br>
+
+                  1.Trường Đại học Công nghiệp Thành phố Hồ Chí Minh (12 Nguyễn Văn Bảo, Phường Hạnh Thông, TP.HCM - Cổng 1) <br><br>
+
+                  2.Tòa nhà Opera View (161 Đồng Khởi, Phường Sài Gòn, TP.HCM) <br><br>
+
+                  Gia đình chúng con cũng muốn chuẩn bị thật chu đáo để quý vị yên tâm di chuyển nên nếu quý vị sắp xếp di chuyển cùng các xe tại điểm đến thì hỗ trợ giúp chúng con bằng cách phúc đáp và theo dõi nhóm zalo này https://zalo.me/g/o6dumrqnfllfufrzxzl2  <br><br>
+
+                  Chúng con trân trọng cảm ơn quý vị.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="upload">
+        <div class="content" data-anime="fade-in">
+          <div class="divider" data-anime="fade-in">
+            <img src="assets/images/icons/divider.png" alt="">
+          </div>
+          <div class="subtext" data-anime="fade-in">
+            We didn’t catch every moment. <br>
+            If you did, we’d love to see it.
+          </div>
+          <a target="_blank" class="upload-btn" href="https://drive.google.com/drive/folders/1PI1JxWaI5K3Gnr9Vh0ekiBcB6H8fb2t5" data-anime="flip-vertical-left">Upload your moment</a>
+          <div class="small-note">
+            We’ll print our favorite photo and send it <br> to you as a thank-you.
+          </div>
+        </div>
+      </section>
+
+      <section class="album">
+        <div class="content" data-anime="fade-in">
+          <h2 class="titile" data-anime="fade-in">Album photo</h2>
+          <div class="swiper main-swiper" data-anime="fade-in">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="" /></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+  
+
+      <section class="rsvp">
+        <div class="content" data-anime="fade-in">
+          <div class="top-img">
+            <img src="assets/images/flower_bg_01.png" alt="" />
+          </div>
+          <form id="rsvpForm" class="rsvp-form">
+            <div class="header">
+              <h2 class="title" data-anime="fade-in">Atendance confirmtion</h2>
+              <p class="subtitle" data-anime="fade-in">
+                We kindly request that you conﬁrm your attendance by <br> <strong>February 15</strong>, so we may prepare accordingly
+              </p>
+            </div>
+            <hr>
+            <div class="button-group" data-anime="fade-in">
+              <div class="radio-wrapper">
+                <input type="radio" id="attendYes" name="confirm" value="yes" checked/>
+                <label for="attendYes" class="radio-label">Yes</label
+                >
+              </div>
+              <div class="radio-wrapper">
+                <input type="radio" id="attendNo" name="confirm" value="no" />
+                <label for="attendNo" class="radio-label">No</label>
+              </div>
+            </div>
+
+            <!-- <div class="form-group guest-number" data-anime="fade-right">
+            <label>
+              NUMBER OF ATTENDANCE
+              <span class="subtitle">/SỐ NGƯỜI ĐI CÙNG/</span>
+            </label>
+            <input type="text" id="attendance" name="attendance" placeholder="">
+          </div> -->
+
+            <div class="form-group" data-anime="fade-in">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Name"
+                required
+              />
+            </div>
+
+            <!-- <div class="form-group" data-anime="fade-in">
+              <select class="form-select" name="confirm" required>
+                <option value="" disabled selected>Bạn sẽ đến chứ?</option>
+                <option value="yes">Mình chắc chắn sẽ đến</option>
+                <option value="no">Xin lỗi mình bận rồi</option>
+              </select>
+            </div> -->
+
+            <!-- <div class="form-group" data-anime="fade-in">
+              <select class="form-select" name="guest_number">
+                <option value="" disabled selected>
+                  Bạn sẽ tham dự cùng bao nhiêu người?
+                </option>
+                <option value="Đi một mình">Đi một mình</option>
+                <option value="1 người">1 người</option>
+                <option value="2 người">2 người</option>
+                <option value="3 người">3 người</option>
+              </select>
+            </div> -->
+
+            <div class="form-group dietary">
+              <p class="subtitle" data-anime="fade-in">
+                Do you have any dietary requirements or allergies?
+              </p>
+              <div class="button-group" data-anime="fade-in">
+                <div class="radio-wrapper">
+                  <input
+                    type="radio"
+                    id="nonVeg"
+                    name="dietary"
+                    value="non-vegetarian"
+                    checked
+                  />
+                  <label for="nonVeg" class="radio-label">
+                    Non - Vegetarian
+                  </label>
+                </div>
+                <div class="radio-wrapper">
+                  <input
+                    type="radio"
+                    id="veg"
+                    name="dietary"
+                    value="vegetarian"
+                  />
+                  <label for="veg" class="radio-label">
+                    Vegetarian
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group other" data-anime="fade-in">
+              <textarea
+                id="another"
+                name="another"
+                placeholder="Another - Please specify any allergies?"
+              ></textarea>
+            </div>
+
+            <!-- <div class="form-group guest-info">
+              <p class="guest-info-title" data-anime="fade-in">
+                Nếu bạn đến cùng bạn đồng hành <br />
+                hãy cho mình xin thông tin của họ nhé!
+              </p>
+              <div class="form-group" data-anime="fade-in">
+                <input
+                  type="text"
+                  id="guest-info"
+                  name="guest_info"
+                  placeholder="Điền họ tên người đi cùng"
+                />
+              </div>
+            </div> -->
+
+            <!-- <div class="form-group" data-anime="fade-in">
+              <select class="form-select" name="dietary">
+                <option value="" disabled selected>
+                  Bạn có lưu ý đặc biệt gì về thức ăn không?
+                </option>
+                <option value="Thực đơn thường">Thực đơn thường</option>
+                <option value="Thực đơn chay">Thực đơn chay</option>
+              </select>
+            </div> -->
+            <div class="note" data-anime="fade-in">
+              We're so excited to celebrate our special day with you. <br>
+              To keep our celebration intimate, we kindly ask that this be an <br>
+              adults-only event, with invitations extended to named guests only. <br>
+              Your presence means the world to us.
+            </div>
+
+            <div class="form-group" data-anime="fade-in">
+              <div class="wish-label">
+                Wedding Wishes
+              </div>
+              <textarea
+                id="message"
+                name="wish"
+                placeholder="Please send your loving wishes to the Bride and Groom?"
+              ></textarea>
+            </div>
+            <button type="submit" class="submit-btn" data-anime="fade-in-end">Confirm</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- <section class="countdown">
+        <div class="content">
+          <div class="divider">
+            <img src="assets/images/divider_flower.png" alt="" data-anime="flip" />
+          </div>
+          <h2 class="title" data-anime="fade-in">Countdown</h2>
+          <div class="countdown-box" data-anime="fade-in">
+            <div class="time-box">
+              <div class="number" id="days">00</div>
+              <div class="label">Days</div>
+            </div>
+            <div class="time-box">
+              <div class="number" id="hours">00</div>
+              <div class="label">Hours</div>
+            </div>
+            <div class="time-box">
+              <div class="number" id="mins">00</div>
+              <div class="label">Mins</div>
+            </div>
+            <div class="time-box">
+              <div class="number" id="secs">00</div>
+              <div class="label">Secs</div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- <section class="end">
+        <div class="content">
+          <p class="text-main" data-anime="fade-in-end">
+            Cảm ơn bạn đã dành tình cảm cho chúng mình! Sự hiện diện của bạn
+            chính là món quà ý nghĩa nhất, và chúng mình vô cùng trân quý khi
+            được cùng bạn chia sẻ niềm hạnh phúc trong ngày trọng đại này.
+          </p>
+
+          <div class="thanks" data-anime="fade-in-end">Thank you</div>
+        </div>
+      </section> -->
+
+      <div class="music-box">
+        <!-- <div class="label">
+          <span>Ở đây có </br> nhạc hay</span>
+        </div> -->
+        <div class="player" id="player-btn" aria-label="Play/Pause">
+          <img id="iconSvg" src="assets/images/cd.png" alt="Music Icon" />
+        </div>
+      </div>
+      <audio
+        id="audio"
+        preload="auto"
+        src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/music/Christina%20Perri%20-%20A%20Thousand%20Years%20%5BOfficial%20Music%20Video%5D.mp3"
+        loop
+        type="audio/mpeg"
+      ></audio>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="assets/js/gsap-animations.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

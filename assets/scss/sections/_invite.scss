@@ -1,0 +1,161 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.invite {
+    width: 100%;
+    background: url('../../assets/images/flowers_bg.png') no-repeat, url('../../assets/images/flower_bg_bottom_bg.png') no-repeat;
+    background-size: 100% auto, 100% auto;
+    background-position: center 12%, bottom;
+    .content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        font-family: $font-1FTV-VIP-Qerginas;
+        background-color: $primary-color;
+        padding-top: 5%;
+
+        .invitation-text {
+            font-size: 17px;
+            margin-bottom: 8%;
+        }
+
+        .names {
+            position: relative;
+            margin-bottom: 8%;
+            max-width: 284px;
+            width: 100%;
+            font-size: 47px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            .wife {
+                text-align: left;
+                margin-bottom: 5%;
+            }
+            .husband {
+                text-align: right;
+            }
+            .ampersand {
+                position: absolute;
+                width: 100%;
+                max-width: 55px;
+                width: 100%;
+                top: 42%;
+                right: 39%;
+                font-size: 12px;
+                opacity: .6;
+                // img {
+                //     width: 100%;
+                //     height: auto;
+                // }
+            }
+        }
+
+        .divider {
+            margin-bottom: 10%;
+            img {
+                max-width: 15px;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .datetime {
+            margin-bottom: 2%;
+            .title {
+                font-size: 12px;
+                letter-spacing: 1px;
+                 margin-bottom: 5%;
+            }
+            .date {
+                font-size: 42px;
+                letter-spacing: 4px;
+            }
+        }
+
+        .location {
+            width: 100%;
+            .name {
+                font-size: 20px;
+                line-height: 1.2;
+                margin-bottom: 2%;
+                letter-spacing: 2px;
+            }
+            .address {
+                font-size: 12px;
+                letter-spacing: 1.2px;
+                margin-bottom: 2%;
+            }
+
+            .maps-button {
+                font-family: inherit;
+                display: block;
+                width: 40%;
+                padding: 2% 0 1%;
+                background-color: $text-color;
+                color: white;
+                border: none;
+                font-size: 15px;
+                letter-spacing: 1px;
+                cursor: pointer;
+                border-radius: 15px;
+                transition: all 0.3s ease;
+                text-transform: uppercase;
+                margin: 0 auto;
+                margin-bottom: 10%;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            .invitation-text {
+                font-size: calc((17 / 500) * 100vw);
+            }
+    
+            .names {
+                max-width: calc((284 / 500) * 100vw);
+                font-size: calc((47 / 500) * 100vw);
+                letter-spacing: calc((4 / 500) * 100vw);
+                .ampersand {
+                    max-width: calc((55 / 500) * 100vw);
+                }
+            }
+    
+            .divider {
+                img {
+                    max-width: calc((15 / 500) * 100vw);
+                }
+            }
+    
+            .datetime {
+                .title {
+                    font-size: calc((12 / 500) * 100vw);
+                    letter-spacing: calc((1 / 500) * 100vw);
+                }
+                .date {
+                    font-size: calc((42 / 500) * 100vw);
+                    letter-spacing: calc((4 / 500) * 100vw);
+                }
+            }
+    
+            .location {
+                .name {
+                    font-size: calc((20 / 500) * 100vw);
+                    letter-spacing: calc((2 / 500) * 100vw);
+                }
+                .address {
+                    font-size: calc((12 / 500) * 100vw);
+                    letter-spacing: calc((1.2 / 500) * 100vw);
+                }
+    
+                .maps-button {
+                    font-size: calc((15 / 500) * 100vw);
+                    letter-spacing: calc((1 / 500) * 100vw);
+                }
+            }
+            
+        }
+    }
+}

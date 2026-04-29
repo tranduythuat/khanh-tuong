@@ -1,0 +1,86 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.hero {
+    width: 100%;
+    // text-align: unset;
+    .content {
+        aspect-ratio: 500 / 865;
+        background: url('../../assets/images/hero_bg_bottom.png') no-repeat bottom / contain;
+        // url('https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/han-ngoc/_DSC0368.webp') no-repeat bottom / 116%;
+        background-color: $image_bg;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        perspective: 1000px;
+        font-family: $font-1FTV-VIP-Qerginas;
+        .logo {
+            margin-top: 7%;
+            img {
+                max-width: 94px;
+                width: 100%;
+                height: auto;
+            }
+        }
+        .text-box {
+            color: #f8f6f1ff;
+            background: url('../../assets/images/icons/ampersand_icon.png') no-repeat;
+            background-size: 43%;
+            background-position: 59% 36%;
+            padding-top: 5%;
+            max-width: 314px;
+            width: 100%;
+            margin-bottom: 4%;
+            .label {
+                font-size: 14px;  
+                text-transform: uppercase;
+                margin-bottom: 1%;
+                letter-spacing: 1px;
+            }
+            .couple-name {
+                font-size: 52px;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                .wife {
+                    text-align: left;
+                }
+                .husband {
+                    text-align: right;
+                }
+            }
+            .date {
+                font-size: 33px;
+                letter-spacing: 3px;
+            }
+        }
+        
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            .logo {
+                img {
+                    max-width: calc((94 / 500) * 100vw);
+                }
+            }
+            .text-box {
+                max-width: calc((314 / 500) * 100vw);
+                .label {
+                    font-size: calc((14 / 500) * 100vw);
+                    letter-spacing: calc((1 / 500) * 100vw);
+                }
+                .couple-name {
+                    font-size: calc((52 / 500) * 100vw);
+                    letter-spacing: calc((4 / 500) * 100vw);
+                }
+                .date {
+                    font-size: calc((33 / 500) * 100vw);
+                    letter-spacing: calc((3 / 500) * 100vw);
+                }
+            }
+        }
+    }
+}

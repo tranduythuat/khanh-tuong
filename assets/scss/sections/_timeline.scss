@@ -1,0 +1,65 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.timeline {
+    width: 100%;
+    .content {
+        width: 100%;
+        background: url('../../assets/images/flower_bg_01.png') no-repeat top left / 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background-color: $primary-color;
+        .title {
+            font-family: $font-Bellamy-Stevenson;
+            font-size: 54px;
+            font-weight: 300;
+            margin-top: 12%;
+        }
+    }
+    
+    .items {
+        margin-top: 10%;
+        width: 100%;
+        .item {
+            margin-bottom: 5%;
+            .icon {
+                @include flex-center;
+                margin-bottom: 2%;
+                img {
+                    max-width: 33px;
+                    width: 100%;
+                    height: auto
+                }
+            }
+            .time {
+                font-family: $font-1FTV-VIP-Qerginas;
+                letter-spacing: 1.5px;
+                @include flex-center;
+                font-size: 16px;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            .title {
+                font-size: calc((54 / 500) * 100vw);
+            }
+        }
+        .items {
+            .item {
+                .icon {
+                    img {
+                        max-width: calc((33 / 500) * 100vw);
+                    }
+                }
+                .time {
+                    font-size: calc((16 / 500) * 100vw);
+                    letter-spacing: calc((1.5 / 500) * 100vw);
+                }
+            }
+        }
+    }
+}
