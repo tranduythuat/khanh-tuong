@@ -1,13 +1,12 @@
 @use "../variables" as *;
 @use "../mixins" as *;
 
-.hero {
+.hero { 
     width: 100%;
     // text-align: unset;
     .content {
         aspect-ratio: 500 / 865;
-        background: url('../../assets/images/hero_bg_bottom.png') no-repeat bottom / contain;
-        // url('https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/han-ngoc/_DSC0368.webp') no-repeat bottom / 116%;
+        background: linear-gradient(to top, $primary-color, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tuong-khanh/S12C_KT0583.webp') no-repeat bottom / 116%;
         background-color: $image_bg;
         width: 100%;
         height: 100%;
@@ -20,7 +19,7 @@
         .logo {
             margin-top: 7%;
             img {
-                max-width: 94px;
+                max-width: 54px;
                 width: 100%;
                 height: auto;
             }
@@ -63,7 +62,7 @@
         .content {
             .logo {
                 img {
-                    max-width: calc((94 / 500) * 100vw);
+                    max-width: calc((54 / 500) * 100vw);
                 }
             }
             .text-box {

@@ -13,10 +13,16 @@
        SWIPER
     ====================================================== */
 
+  let mainSwiper = null;
+
   function initSwiper() {
     if (!qs(".main-swiper") || typeof Swiper === "undefined") return;
+    if (mainSwiper) {
+      mainSwiper.update();
+      return;
+    }
 
-    new Swiper(".main-swiper", {
+    mainSwiper = new Swiper(".main-swiper", {
       spaceBetween: 10,
       navigation: {
         prevEl: ".swiper-button-prev",
@@ -34,6 +40,8 @@
       effect: "fade",
       fadeEffect: { crossFade: true },
       speed: 1000,
+      observer: true,
+      observeParents: true,
     });
   }
 
@@ -621,4 +629,3 @@
 
   document.addEventListener("DOMContentLoaded", init);
 })();
-

@@ -6,7 +6,6 @@
     width: 100%;
     .content {
         width: 100%;
-        background-color: $primary-color;
         h2 {
             font-family: $font-Bellamy-Stevenson;
             font-size: 54px;
@@ -19,7 +18,7 @@
             width: 100%;
             aspect-ratio: 500 / 730;
             margin: 0 auto;
-            background-color: $image_bg;
+            // background-color: $image_bg;
         
             img {
                 width: 100%;

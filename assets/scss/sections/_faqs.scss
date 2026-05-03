@@ -7,9 +7,8 @@
     .content {
         width: 100%;
         aspect-ratio: 500 / 806;
-        // background: url('../../assets/images/faqs_bg.png') no-repeat center / cover;
+        background: linear-gradient(rgba(0, 0, 0, 0.365), rgba(0, 0, 0, 0.3)), url('https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tuong-khanh/S12C_KT0674.webp') no-repeat center / cover;
         background-color: $image_bg;
-        color: $primary-color;
         display: flex;
         justify-content: start;
         align-items: center;

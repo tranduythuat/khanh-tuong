@@ -15,6 +15,7 @@
         .top-img {
             position: absolute;
             top: 0;
+            z-index: -110;
             img {
                 max-width: 250px;
                 width: 100%;
@@ -25,9 +26,11 @@
         .rsvp-form {
             display: block;
             padding: 8% 9% 5%;
-
+            z-index: 20;
+            letter-spacing: .8px;
             .header {
-                padding-bottom: 8%;
+                border-bottom: 2px dashed $text-color;
+                margin-bottom: 5%;
                 .title {
                     font-family: $font-Bellamy-Stevenson;
                     font-size: 54px;
@@ -36,6 +39,7 @@
                 }
                 .subtitle {
                     font-size: 14px;
+                    margin-bottom: 8%;
                 }
             }
 
@@ -68,13 +72,13 @@
                     border: 2px solid $text-color;
                     &:hover {
                         background: $text-color;
-                        color: white;
+                        color: $primary-color;
                     }
                 }
 
                 .radio-wrapper input[type="radio"]:checked + .radio-label {
                     background: $text-color;
-                    color: white;
+                    color: $primary-color;
                 }
             }
 
@@ -91,6 +95,7 @@
                     border-radius: 8px;
                     background: transparent;
                     font-size: 12px;
+                    letter-spacing: 1px;
                     outline: none;
                     border: 2px solid $text-color;
                     transition: border-color 0.3s ease;
@@ -117,7 +122,7 @@
 
                 input[type="text"]::placeholder,
                 textarea::placeholder {
-                    // color: $text-color;
+                    color: $text-color;
                 }
 
                 textarea::placeholder {
@@ -210,7 +215,7 @@
                 width: 30%;
                 padding: 2% 0 1%;
                 background: $text-color;
-                color: white;
+                color: $primary-color;
                 border: none;
                 border-radius: 5px;
                 font-weight: 600;
@@ -223,8 +228,9 @@
             }
     
             .submit-btn:hover {
-                background: rgb(41, 51, 36);
+                background: rgb(66, 0, 0);
                 opacity: 0.9;
+                color: #fff;
             }
     
             .submit-btn:active {
@@ -255,6 +261,7 @@
             }
         
             .rsvp-form {
+                letter-spacing: calc((.8 / 500) * 100vw);
                 .header {
                     .title {
                         font-size: calc((54 / 500) * 100vw);
@@ -281,6 +288,7 @@
                     textarea,
                     .form-select {
                         font-size: calc((14 / 500) * 100vw);
+                        letter-spacing: calc((1 / 500) * 100vw);
                     }
 
                     .guest-info-title {

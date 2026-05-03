@@ -50,10 +50,8 @@ section {
   position: relative;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.281);
-  color: #521221;
-  background-color: #faf6ee;
-  display: none;
-  opacity: 0;
+  color: #fff;
+  background-color: #560d0d;
 }
 
 /* music */
@@ -130,7 +128,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #faf6ee;
+  background: #560d0d;
   color: white;
   padding: 1rem;
 }
@@ -242,7 +240,7 @@ header {
 }
 .hero .content {
   aspect-ratio: 500/865;
-  background: url("../../assets/images/hero_bg_bottom.png") no-repeat bottom/contain;
+  background: linear-gradient(to top, #560d0d, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tuong-khanh/S12C_KT0583.webp") no-repeat bottom/116%;
   background-color: #916739;
   width: 100%;
   height: 100%;
@@ -257,7 +255,7 @@ header {
   margin-top: 7%;
 }
 .hero .content .logo img {
-  max-width: 94px;
+  max-width: 54px;
   width: 100%;
   height: auto;
 }
@@ -294,7 +292,7 @@ header {
 }
 @media (max-width: 500px) {
   .hero .content .logo img {
-    max-width: 18.8vw;
+    max-width: 10.8vw;
   }
   .hero .content .text-box {
     max-width: 62.8vw;
@@ -326,7 +324,7 @@ header {
   flex-direction: column;
   align-items: center;
   font-family: "1FTV-VIP-Qerginas", sans-serif;
-  background-color: #faf6ee;
+  background-color: #560d0d;
   padding-top: 5%;
 }
 .invite .content .invitation-text {
@@ -398,8 +396,8 @@ header {
   display: block;
   width: 40%;
   padding: 2% 0 1%;
-  background-color: #521221;
-  color: white;
+  background-color: #fff;
+  color: #560d0d;
   border: none;
   font-size: 15px;
   letter-spacing: 1px;
@@ -453,8 +451,7 @@ header {
 .our-story .content {
   width: 100%;
   aspect-ratio: 500/1057;
-  background: url("../../assets/images/ourstory_bg_bottom.png") no-repeat bottom/contain;
-  background-color: #916739;
+  background: linear-gradient(to top, #560d0d, #560d0d, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tuong-khanh/S12C_KT0478.webp") no-repeat top/contain;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -473,6 +470,7 @@ header {
   align-items: end;
   text-align: left;
   padding: 0 4%;
+  color: #6f0000;
 }
 .our-story .content .text-main .wax_seal {
   max-width: 90px;
@@ -519,7 +517,7 @@ header {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color: #faf6ee;
+  background-color: #560d0d;
 }
 .timeline .content .title {
   font-family: "Bellamy-Stevenson", sans-serif;
@@ -573,7 +571,7 @@ header {
   width: 100%;
   perspective: 1000px;
   background: url("../../assets/images/flower_bg_02.png") no-repeat right 20%/45%;
-  background-color: #faf6ee;
+  background-color: #560d0d;
   padding-bottom: 23%;
 }
 .dresscode .content h2 {
@@ -613,7 +611,7 @@ header {
   width: 100%;
   aspect-ratio: 1;
   border-radius: 50%;
-  border: 1px solid #521221;
+  border: 1px solid #fff;
 }
 .dresscode .content .description-box .desc-img {
   display: flex;
@@ -696,8 +694,8 @@ header {
 .faqs .content {
   width: 100%;
   aspect-ratio: 500/806;
+  background: linear-gradient(rgba(0, 0, 0, 0.365), rgba(0, 0, 0, 0.3)), url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tuong-khanh/S12C_KT0674.webp") no-repeat center/cover;
   background-color: #916739;
-  color: #faf6ee;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -773,7 +771,7 @@ header {
 .upload .content {
   padding: 10% 0;
   width: 100%;
-  background-color: #faf6ee;
+  background-color: #560d0d;
   perspective: 1000px;
 }
 .upload .content .divider {
@@ -794,8 +792,8 @@ header {
   display: block;
   width: 40%;
   padding: 1.5% 0 1%;
-  background-color: #521221;
-  color: white;
+  background-color: #fff;
+  color: #560d0d;
   border: none;
   font-size: 12px;
   letter-spacing: 1px;
@@ -832,20 +830,18 @@ header {
 }
 .album .content {
   width: 100%;
-  background-color: #faf6ee;
 }
 .album .content h2 {
   font-family: "Bellamy-Stevenson", sans-serif;
   font-size: 54px;
   font-weight: 300;
-  color: #521221;
+  color: #fff;
   margin: 5% 0 7%;
 }
 .album .content .swiper {
   width: 100%;
   aspect-ratio: 500/730;
   margin: 0 auto;
-  background-color: #916739;
 }
 .album .content .swiper img {
   width: 100%;
@@ -892,12 +888,13 @@ header {
   background-size: 65%;
   background-position: bottom right;
   perspective: 1000px;
-  background-color: #faf6ee;
+  background-color: #560d0d;
   position: relative;
 }
 .rsvp .content .top-img {
   position: absolute;
   top: 0;
+  z-index: -110;
 }
 .rsvp .content .top-img img {
   max-width: 250px;
@@ -907,9 +904,12 @@ header {
 .rsvp .content .rsvp-form {
   display: block;
   padding: 8% 9% 5%;
+  z-index: 20;
+  letter-spacing: 0.8px;
 }
 .rsvp .content .rsvp-form .header {
-  padding-bottom: 8%;
+  border-bottom: 2px dashed #fff;
+  margin-bottom: 5%;
 }
 .rsvp .content .rsvp-form .header .title {
   font-family: "Bellamy-Stevenson", sans-serif;
@@ -919,6 +919,7 @@ header {
 }
 .rsvp .content .rsvp-form .header .subtitle {
   font-size: 14px;
+  margin-bottom: 8%;
 }
 .rsvp .content .rsvp-form .button-group {
   display: grid;
@@ -944,15 +945,15 @@ header {
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: center;
-  border: 2px solid #521221;
+  border: 2px solid #fff;
 }
 .rsvp .content .rsvp-form .button-group .radio-label:hover {
-  background: #521221;
-  color: white;
+  background: #fff;
+  color: #560d0d;
 }
 .rsvp .content .rsvp-form .button-group .radio-wrapper input[type=radio]:checked + .radio-label {
-  background: #521221;
-  color: white;
+  background: #fff;
+  color: #560d0d;
 }
 .rsvp .content .rsvp-form .form-group {
   margin-bottom: 2%;
@@ -961,14 +962,15 @@ header {
 .rsvp .content .rsvp-form .form-group input[type=number],
 .rsvp .content .rsvp-form .form-group textarea {
   font-family: "Lora", sans-serif;
-  color: #521221;
+  color: #fff;
   width: 100%;
   padding: 2% 4%;
   border-radius: 8px;
   background: transparent;
   font-size: 12px;
+  letter-spacing: 1px;
   outline: none;
-  border: 2px solid #521221;
+  border: 2px solid #fff;
   transition: border-color 0.3s ease;
 }
 .rsvp .content .rsvp-form .form-group input[type=text]:focus,
@@ -986,6 +988,10 @@ header {
   resize: vertical;
   font-family: inherit;
 }
+.rsvp .content .rsvp-form .form-group input[type=text]::placeholder,
+.rsvp .content .rsvp-form .form-group textarea::placeholder {
+  color: #fff;
+}
 .rsvp .content .rsvp-form .form-group textarea::placeholder {
   white-space: pre-line; /* Cho phép hiển thị xuống dòng trong placeholder */
 }
@@ -1000,9 +1006,9 @@ header {
   border-radius: 8px;
   background: transparent;
   font-size: 14px;
-  color: #faf6ee;
+  color: #560d0d;
   outline: none;
-  border: 2px solid #faf6ee;
+  border: 2px solid #560d0d;
   transition: border-color 0.3s ease;
   appearance: none;
   -webkit-appearance: none;
@@ -1037,8 +1043,8 @@ header {
   margin-bottom: 3%;
 }
 .rsvp .content .rsvp-form .note {
-  border-top: 2px dashed #521221;
-  border-bottom: 2px dashed #521221;
+  border-top: 2px dashed #fff;
+  border-bottom: 2px dashed #fff;
   padding: 5% 0;
   line-height: 1.5;
   text-align: center;
@@ -1047,7 +1053,7 @@ header {
   font-size: 14px;
 }
 .rsvp .content .rsvp-form hr {
-  border-top: 2px dashed #521221;
+  border-top: 2px dashed #fff;
   margin-bottom: 5%;
 }
 .rsvp .content .rsvp-form .message {
@@ -1061,8 +1067,8 @@ header {
   font-family: inherit;
   width: 30%;
   padding: 2% 0 1%;
-  background: #521221;
-  color: white;
+  background: #fff;
+  color: #560d0d;
   border: none;
   border-radius: 5px;
   font-weight: 600;
@@ -1074,8 +1080,9 @@ header {
   margin: 3% 0 10%;
 }
 .rsvp .content .rsvp-form .submit-btn:hover {
-  background: rgb(41, 51, 36);
+  background: rgb(66, 0, 0);
   opacity: 0.9;
+  color: #fff;
 }
 .rsvp .content .rsvp-form .submit-btn:active {
   transform: scale(0.98);
@@ -1095,6 +1102,9 @@ header {
   .rsvp .content .text-size-10, .rsvp .content label {
     font-size: 1.822vw;
   }
+  .rsvp .content .rsvp-form {
+    letter-spacing: 0.16vw;
+  }
   .rsvp .content .rsvp-form .header .title {
     font-size: 10.8vw;
   }
@@ -1105,7 +1115,7 @@ header {
     font-size: 2.4vw;
   }
   .rsvp .content .rsvp-form .button-group .radio-wrapper input[type=radio]:checked + .radio-label {
-    background: #521221;
+    background: #fff;
     color: white;
   }
   .rsvp .content .rsvp-form .form-group input[type=text],
@@ -1113,6 +1123,7 @@ header {
   .rsvp .content .rsvp-form .form-group textarea,
   .rsvp .content .rsvp-form .form-group .form-select {
     font-size: 2.8vw;
+    letter-spacing: 0.2vw;
   }
   .rsvp .content .rsvp-form .form-group .guest-info-title {
     font-size: 3vw;
