@@ -44,6 +44,7 @@ section {
     position: fixed;
     bottom: 10px;
     right: 1%;
+    z-index: 99999;
     .label {
         @include flex-center;
         position: relative;
@@ -67,7 +68,7 @@ section {
         max-width: 55px;
         width: 100%;
         aspect-ratio: 1;
-        z-index: 9999;
+        z-index: 99999;
         @include flex-center;
     }
 }

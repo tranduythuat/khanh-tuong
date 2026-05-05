@@ -62,6 +62,7 @@ section {
   position: fixed;
   bottom: 10px;
   right: 1%;
+  z-index: 99999;
 }
 .music-box .label {
   display: flex;
@@ -87,7 +88,7 @@ section {
   max-width: 55px;
   width: 100%;
   aspect-ratio: 1;
-  z-index: 9999;
+  z-index: 99999;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -696,12 +697,33 @@ header {
 .faqs .content {
   width: 100%;
   aspect-ratio: 500/806;
-  background: linear-gradient(rgba(0, 0, 0, 0.365), rgba(0, 0, 0, 0.3)), url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tuong-khanh/S12C_KT0674.webp") no-repeat center/cover;
-  background-color: #916739;
+  background-color: #111;
   display: flex;
   justify-content: start;
   align-items: center;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.faqs .content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tuong-khanh/S12C_KT0674.webp") no-repeat center/cover;
+  filter: blur(5px);
+  transform: scale(1.08);
+  z-index: 0;
+}
+.faqs .content::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.365), rgba(0, 0, 0, 0.3));
+  z-index: 1;
+}
+.faqs .content > * {
+  position: relative;
+  z-index: 2;
 }
 .faqs .content .title {
   font-size: 54px;
@@ -832,6 +854,7 @@ header {
 }
 .album .content {
   width: 100%;
+  padding-bottom: 10%;
 }
 .album .content h2 {
   font-family: "Bellamy-Stevenson", sans-serif;
