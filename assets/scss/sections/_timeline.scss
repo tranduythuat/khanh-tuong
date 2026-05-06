@@ -12,8 +12,9 @@
         align-items: center;
         background-color: $primary-color;
         .title {
-            font-family: $font-Bellamy-Stevenson;
-            font-size: 54px;
+            // font-family: $font-Bellamy-Stevenson;
+            font-family: $font-1FTV-VIP-Qerginas;
+            font-size: 48px;
             font-weight: 300;
             margin-top: 12%;
         }
@@ -45,7 +46,7 @@
     @media (max-width: 500px) {
         .content {
             .title {
-                font-size: calc((54 / 500) * 100vw);
+                font-size: calc((48 / 500) * 100vw);
             }
         }
         .items {

@@ -52,8 +52,6 @@ section {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.281);
   color: #fff;
   background-color: #560d0d;
-  display: none;
-  opacity: 0;
 }
 
 /* music */
@@ -466,7 +464,7 @@ header {
   font-size: 11px;
   width: 100%;
   max-width: 399px;
-  aspect-ratio: 399/372;
+  aspect-ratio: 399/406;
   background: url("../../assets/images/ourstory_flower_bg.png") no-repeat center/cover, url("../../assets/images/ourstory_text_bg.png") no-repeat center/cover;
   display: flex;
   justify-content: center;
@@ -523,8 +521,8 @@ header {
   background-color: #560d0d;
 }
 .timeline .content .title {
-  font-family: "Bellamy-Stevenson", sans-serif;
-  font-size: 54px;
+  font-family: "1FTV-VIP-Qerginas", sans-serif;
+  font-size: 48px;
   font-weight: 300;
   margin-top: 12%;
 }
@@ -556,7 +554,7 @@ header {
 }
 @media (max-width: 500px) {
   .timeline .content .title {
-    font-size: 10.8vw;
+    font-size: 9.6vw;
   }
   .timeline .items .item .icon img {
     max-width: 6.6vw;
@@ -575,7 +573,7 @@ header {
   perspective: 1000px;
   background: url("../../assets/images/flower_bg_02.png") no-repeat right 20%/45%;
   background-color: #560d0d;
-  padding-bottom: 23%;
+  padding-bottom: 10%;
 }
 .dresscode .content h2 {
   font-family: "Bellamy-Stevenson", sans-serif;
@@ -696,8 +694,8 @@ header {
 }
 .faqs .content {
   width: 100%;
-  aspect-ratio: 500/806;
-  background-color: #111;
+  aspect-ratio: 500/560;
+  background-color: inherit;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -705,29 +703,9 @@ header {
   position: relative;
   overflow: hidden;
 }
-.faqs .content::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tuong-khanh/S12C_KT0674.webp") no-repeat center/cover;
-  filter: blur(5px);
-  transform: scale(1.08);
-  z-index: 0;
-}
-.faqs .content::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.365), rgba(0, 0, 0, 0.3));
-  z-index: 1;
-}
-.faqs .content > * {
-  position: relative;
-  z-index: 2;
-}
 .faqs .content .title {
-  font-size: 54px;
-  font-family: "Bellamy-Stevenson", sans-serif;
+  font-size: 48px;
+  font-family: "1FTV-VIP-Qerginas", sans-serif;
   margin-top: 10%;
 }
 .faqs .content .faq-container {
@@ -773,7 +751,7 @@ header {
 }
 @media (max-width: 500px) {
   .faqs .content .title {
-    font-size: 10.8vw;
+    font-size: 9.6vw;
   }
   .faqs .content .faq-container {
     max-width: 90vw;
@@ -857,8 +835,8 @@ header {
   padding-bottom: 10%;
 }
 .album .content h2 {
-  font-family: "Bellamy-Stevenson", sans-serif;
-  font-size: 54px;
+  font-family: "1FTV-VIP-Qerginas", sans-serif;
+  font-size: 42px;
   font-weight: 300;
   color: #fff;
   margin: 5% 0 7%;
@@ -887,7 +865,7 @@ header {
 }
 @media (max-width: 500px) {
   .album .content h2 {
-    font-size: 10.8vw;
+    font-size: 8.4vw;
   }
   .album .content .swiper .swiper-button-next:after,
   .album .content .swiper .swiper-button-prev:after {
@@ -937,8 +915,8 @@ header {
   margin-bottom: 5%;
 }
 .rsvp .content .rsvp-form .header .title {
-  font-family: "Bellamy-Stevenson", sans-serif;
-  font-size: 54px;
+  font-family: "1FTV-VIP-Qerginas", sans-serif;
+  font-size: 38px;
   font-weight: 300;
   margin-bottom: 5%;
 }
@@ -1131,7 +1109,7 @@ header {
     letter-spacing: 0.16vw;
   }
   .rsvp .content .rsvp-form .header .title {
-    font-size: 10.8vw;
+    font-size: 7.6vw;
   }
   .rsvp .content .rsvp-form .header .subtitle {
     font-size: 2.8vw;

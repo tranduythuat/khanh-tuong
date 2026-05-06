@@ -32,8 +32,9 @@
                 border-bottom: 2px dashed $text-color;
                 margin-bottom: 5%;
                 .title {
-                    font-family: $font-Bellamy-Stevenson;
-                    font-size: 54px;
+                    // font-family: $font-Bellamy-Stevenson;
+                    font-family: $font-1FTV-VIP-Qerginas;
+                    font-size: 38px;
                     font-weight: 300;
                     margin-bottom: 5%;
                 }
@@ -264,7 +265,7 @@
                 letter-spacing: calc((.8 / 500) * 100vw);
                 .header {
                     .title {
-                        font-size: calc((54 / 500) * 100vw);
+                        font-size: calc((38 / 500) * 100vw);
                     }
                     .subtitle {
                         font-size: calc((14/ 500) * 100vw);;

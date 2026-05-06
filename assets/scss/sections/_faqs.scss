@@ -6,9 +6,9 @@
 
     .content {
         width: 100%;
-        aspect-ratio: 500 / 806;
-        background-color: #111;
-        // background-color: $image_bg;
+        aspect-ratio: 500 / 560;
+        // background-color: #111;
+        background-color: inherit;
         display: flex;
         justify-content: start;
         align-items: center;
@@ -16,32 +16,32 @@
         position: relative;
         overflow: hidden;
 
-        &::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: url('https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tuong-khanh/S12C_KT0674.webp') no-repeat center / cover;
-            filter: blur(5px);
-            transform: scale(1.08);
-            z-index: 0;
-        }
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     inset: 0;
+        //     background: url('https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tuong-khanh/S12C_KT0674.webp') no-repeat center / cover;
+        //     filter: blur(5px);
+        //     transform: scale(1.08);
+        //     z-index: 0;
+        // }
 
-        &::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(rgba(0, 0, 0, 0.365), rgba(0, 0, 0, 0.3));
-            z-index: 1;
-        }
+        // &::after {
+        //     content: "";
+        //     position: absolute;
+        //     inset: 0;
+        //     background: linear-gradient(rgba(0, 0, 0, 0.365), rgba(0, 0, 0, 0.3));
+        //     z-index: 1;
+        // }
 
-        > * {
-            position: relative;
-            z-index: 2;
-        }
+        // > * {
+        //     position: relative;
+        //     z-index: 2;
+        // }
 
         .title {
-            font-size: 54px;
-            font-family: $font-Bellamy-Stevenson;
+            font-size: 48px;
+            font-family: $font-1FTV-VIP-Qerginas;
             margin-top: 10%;
         }
 
@@ -93,7 +93,7 @@
     @media (max-width: 500px) {
         .content {
             .title {
-                font-size: calc((54 / 500) * 100vw);
+                font-size: calc((48 / 500) * 100vw);
             }
     
             .faq-container {
