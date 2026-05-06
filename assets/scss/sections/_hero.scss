@@ -19,7 +19,7 @@
         .logo {
             margin-top: 7%;
             img {
-                max-width: 54px;
+                max-width: 70px;
                 width: 100%;
                 height: auto;
             }
@@ -62,7 +62,7 @@
         .content {
             .logo {
                 img {
-                    max-width: calc((54 / 500) * 100vw);
+                    max-width: calc((70 / 500) * 100vw);
                 }
             }
             .text-box {

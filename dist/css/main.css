@@ -258,7 +258,7 @@ header {
   margin-top: 7%;
 }
 .hero .content .logo img {
-  max-width: 54px;
+  max-width: 70px;
   width: 100%;
   height: auto;
 }
@@ -295,7 +295,7 @@ header {
 }
 @media (max-width: 500px) {
   .hero .content .logo img {
-    max-width: 10.8vw;
+    max-width: 14vw;
   }
   .hero .content .text-box {
     max-width: 62.8vw;
