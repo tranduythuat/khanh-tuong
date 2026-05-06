@@ -501,7 +501,7 @@
     });
 
     const sheetURL =
-      "/exec?sheet=confirm";
+      "https://script.google.com/macros/s/AKfycbzIJhYxey6WzyGnjFJBaTEhEwyXvdP6gM1hNzqjMPp4WHkJfEBEzMJ1dncc2g9LA_IKWg/exec?sheet=confirm";
 
     try {
       const res = await fetch(sheetURL, {
@@ -559,7 +559,7 @@
   function initRSVP() {
     const form = document.forms["rsvpForm"];
     if (form) {
-      form.addEventListener("submit", (e) => handleFormSubmit(e, "en"));
+      form.addEventListener("submit", (e) => handleFormSubmit(e, "vi"));
     }
   }
 
