@@ -52,8 +52,6 @@ section {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.281);
   color: #fff;
   background-color: #560d0d;
-  display: none;
-  opacity: 0;
 }
 
 /* music */
@@ -488,6 +486,7 @@ header {
   text-align: justify;
   margin-bottom: 4%;
   line-height: 1.2;
+  font-family: "Lora", sans-serif;
 }
 .our-story .content .sub-text {
   margin: 4% 0;
